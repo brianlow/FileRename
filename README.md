@@ -9,10 +9,20 @@ To run
 Ctrl-Shift-P -> File:Rename
 
 
-To install
+To install 
 ----------
 
-Copy files into Packages\User\ (see Sublime -> Preferences -> Browse Packages...)
+- Sublime -> Preferences -> Browse Packages... 
+- go into User\ 
+- copy file_rename.py and file_rename.sublime-commands here
+
+OR 
+
+- Sublime -> Preferences -> Browse Packages... 
+- git clone https://github.com/brianlow/FileRename
+
+
+
 
 
 
