@@ -1,6 +1,7 @@
 import sublime
 import sublime_plugin
 import os
+import functools
 
 class FileRenameCommand(sublime_plugin.TextCommand):
     def run(self, edit):
