@@ -16,7 +16,7 @@ With [Package Control](http://wbond.net/sublime_packages/package_control):
 
 - Ctrl-Shift-P or Command-Shift-P
 - Package Control: Install Package
-- FileRename
+- File Rename
 
 Manually with git:
 
