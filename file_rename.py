@@ -18,6 +18,10 @@ class FileRenameCommand(sublime_plugin.TextCommand):
             new = os.path.join(branch, leaf)
 
             try:
+                if os.path.exists(new):
+                    sublime.error_message(new + " already exists")
+                    return;
+
                 os.rename(old, new)
 
                 v = self.view.window().find_open_file(old)
