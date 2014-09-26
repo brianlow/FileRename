@@ -21,6 +21,10 @@ class FileRenameCommand(sublime_plugin.TextCommand):
             new = os.path.join(branch, leaf)
 
             try:
+                if len(leaf) is 0:
+                    sublime.error_message("No filename given")
+                    return;
+
                 if os.path.exists(new):
                     sublime.error_message(new + " already exists")
                     return;
