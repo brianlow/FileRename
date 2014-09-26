@@ -8,6 +8,9 @@ class FileRenameCommand(sublime_plugin.TextCommand):
         filename = self.view.file_name()
         branch, leaf = os.path.split(filename)
 
+        if not os.access(filename, os.W_OK):
+            sublime.error_message(leaf + " is read-only")
+
         panel = self.view.window().show_input_panel("New Name:", leaf, functools.partial(self.on_done, filename, branch), None, None)
 
         name, ext = os.path.splitext(leaf)
