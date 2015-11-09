@@ -3,6 +3,7 @@ import sublime_plugin
 import os
 import functools
 
+
 class FileRenameCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         filename = self.view.file_name()
@@ -25,7 +26,7 @@ class FileRenameCommand(sublime_plugin.TextCommand):
                     sublime.error_message("No filename given")
                     return;
 
-                if os.path.exists(new):
+                if os.path.exists(new) and old.lower() != new.lower():
                     sublime.error_message(new + " already exists")
                     return;
 
